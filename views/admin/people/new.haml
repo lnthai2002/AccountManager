@@ -1,3 +1,16 @@
-%p
-  Adding new person
-%input 
+%h1 New person
+%form{:action => "/admin/people/new", :method => "post"}
+  %fieldset
+    %legend
+      User info
+    %input{:type => "textbox", :name => "firstname", :id => "firstname", :placeholder=>'First Name'}
+    %br
+    %input{:type => "textbox", :name => "lastname", :id => "lastname", :placeholder=>'Last Name'}
+    %br
+    %input{:type => "email", :name => "email", :id => "email", :placeholder=>'email'}
+    %br
+    %input{:type => "password", :name => "password", :id => "password", :placeholder=>'Password'}
+    %br
+    %input{:type => "password", :name => "confirmpassword", :id => "confirmpassword", :placeholder=>'Confirmed Password'}
+    %br
+    %input{:type => "submit", :value => "Create and Activate"}
